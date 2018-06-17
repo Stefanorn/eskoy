@@ -1,0 +1,101 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.padding-from-title{
+    padding-top: 50px;
+}
+.fit-to-div{
+    height: 100%;
+    width: 100%;
+}
+/* change the size of the logo */
+.logo{
+    height: 35px;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.container{
+    padding-left: 100px;
+    padding-right: 100px; 
+}
+
+.padding-top-50{
+    padding-top: 50px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+    max-height: 720px;
+}
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+    margin: auto;
+    min-height:200px;
+    height: 720px;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+    .hide-on-small-screens{
+        display: none;
+    }
+    .show-on-small-screens{
+        display: block;
+    } 
+}
+/* Hide/rearrange for medium screens vill effect small screens to */
+@media screen and (max-width: 991px){
+    .hide-on-med-screens{
+        display: none;
+    }
+    .show-on-med-screens{
+        display: block;
+    } 
+    .no-padding-on-med-screen{
+        padding: 0%;
+    }
+}
+.navbar-color{
+
+    background: linear-gradient(gray, transparent);
+    border: 0px;
+
+}
+.nav-text-color,a{
+    color: black;
+    text-shadow:
+    -1px -1px  0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+.nav-text-color,a:hover {
+    color: red;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }

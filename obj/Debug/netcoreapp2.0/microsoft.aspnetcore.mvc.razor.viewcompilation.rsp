@@ -1,0 +1,16 @@
+/Users/stefanorn/Documents/Eskoy
+--output-path=obj/Debug/netcoreapp2.0/
+--application-name=Eskoy
+--content-root=/Users/stefanorn/Documents/Eskoy
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Fisketjeneste.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Historie.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Index.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Jobbsokander.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/kontaktinformasjon.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Tilskudd.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Home/Vareskip.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Shared/Error.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Shared/_Layout.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/Shared/_ValidationScriptsPartial.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/_ViewImports.cshtml
+--file=/Users/stefanorn/Documents/Eskoy/Views/_ViewStart.cshtml

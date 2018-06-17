@@ -1,0 +1,11 @@
+/Users/stefanorn/Documents/Eskoy/bin/Debug/netcoreapp2.0/Eskoy.deps.json
+/Users/stefanorn/Documents/Eskoy/bin/Debug/netcoreapp2.0/Eskoy.runtimeconfig.json
+/Users/stefanorn/Documents/Eskoy/bin/Debug/netcoreapp2.0/Eskoy.runtimeconfig.dev.json
+/Users/stefanorn/Documents/Eskoy/bin/Debug/netcoreapp2.0/Eskoy.dll
+/Users/stefanorn/Documents/Eskoy/bin/Debug/netcoreapp2.0/Eskoy.pdb
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.csproj.CoreCompileInputs.cache
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.AssemblyInfoInputs.cache
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.AssemblyInfo.cs
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.dll
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.pdb
+/Users/stefanorn/Documents/Eskoy/obj/Debug/netcoreapp2.0/Eskoy.csprojAssemblyReference.cache
