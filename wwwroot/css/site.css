@@ -60,7 +60,22 @@
     }
     .show-on-small-screens{
         display: block;
-    } 
+    }
+    .container{
+        padding-left: 2.5%;
+        padding-right: 2.5%; 
+    }
+    
+    .padding-left-smallscreen{
+        padding-left: 2.5%; 
+    }
+    .nav-text-color,a:hover {
+        color: black !important;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-color: transparent !important;
+    }
+
 }
 /* Hide/rearrange for medium screens vill effect small screens to */
 @media screen and (max-width: 991px){
@@ -75,10 +90,8 @@
     }
 }
 .navbar-color{
-
-    background: linear-gradient(gray, transparent);
+    background: linear-gradient(rgb(34, 34, 34), transparent);
     border: 0px;
-
 }
 .nav-text-color,a{
     color: black;
