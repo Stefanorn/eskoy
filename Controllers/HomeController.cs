@@ -6,12 +6,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Eskoy.Models;
 using Eskoy.Models.InputViewModels;
+using Eskoy.Models.ViewModels;
 using Eskoy.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace Eskoy.Controllers
 {
     public class HomeController : Controller
     {
+
+        private string GetLaungaugeByCookie(){
+
+            string laungauge = Request.Cookies["laungauge"].ToString();
+            if (laungauge == ""){
+                return "norwegian";
+            }
+            else {
+                return laungauge;
+            }
+        }
+        public IActionResult SetLaungaugeCookie( string lang ){
+            CookieOptions cookie = new CookieOptions();
+            cookie.Expires = DateTime.Now.AddDays(1);
+            Response.Cookies.Append("laungauge", lang);
+
+            return Ok();
+        }
+
         private HomeService _hs = new HomeService();
         public IActionResult Index()
         {
@@ -19,7 +40,34 @@ namespace Eskoy.Controllers
         }
         public IActionResult Historie()
         {
-            return View();
+            var cards = new List<CardViewModel>();
+            cards.Add( new CardViewModel{
+                Title = "Capter 1",
+                Body =  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda sapiente, provident ducimus eius unde vitae repellat, dicta nesciunt maxime culpa doloremque expedita fugit repudiandae incidunt laborum consequatur necessitatibus? Iusto!",
+                Image = "/images/history4.jpg",
+                ReadMore = "Read More"
+            });
+            cards.Add( new CardViewModel{
+                Title = "Capter 2",
+                Body =  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda sapiente, provident ducimus eius unde vitae repellat, dicta nesciunt maxime culpa doloremque expedita fugit repudiandae incidunt laborum consequatur necessitatibus? Iusto!",
+                Image = "/images/history2.jpg",
+                ReadMore = "Read More"
+            });
+            HistoryViewModel englishTranslation = new HistoryViewModel{
+                CaroselTitle = "History",
+                Cards = cards
+            };
+            
+            HistoryViewModel norweganTranslation = new HistoryViewModel{
+                CaroselTitle = "Historie",
+                Cards = cards
+            };
+            if( GetLaungaugeByCookie() == "english"){
+                return View( englishTranslation );
+            }
+            else {
+                return View( norweganTranslation );
+            }
         }
         public IActionResult Vareskip()
         {
@@ -70,6 +118,7 @@ namespace Eskoy.Controllers
             _hs.SendEmail( null, subject, body);
             return RedirectToAction("Tilskudd");
         }
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
