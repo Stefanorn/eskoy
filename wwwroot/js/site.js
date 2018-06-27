@@ -1,7 +1,7 @@
 ﻿// Write your JavaScript code.
-$( document ).ready(function() {
-    console.log( "webpage ready!" );
 
+
+$( document ).ready(function() {
 
     var slideSpeed = 700;
     $('.slide-me-in').hide().slideDown(slideSpeed);
@@ -13,6 +13,15 @@ $( document ).ready(function() {
         }, function () {
             $(this).animate({ fontSize: '14px' }, "fast");
         });
+
+    $(".laungauge-picker").val(getCookie("laungauge")).attr("selected", true);
+    $(".laungauge-picker").change(function(){
+    console.log( $(this).val());
+      $.post("/Home/SetLaungaugeCookie",{ lang: $(this).val() }, function(){ 
+        location.reload();
+      });
+
+    });
 
         $(".show-appliaction").click(function(){
             $(".job-application").modal({backdrop: "static"});
@@ -62,3 +71,20 @@ $( document ).ready(function() {
           };
     
 });
+
+
+function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }

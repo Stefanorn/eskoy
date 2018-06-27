@@ -43,7 +43,16 @@
     min-height:200px;
     height: 720px;
 }
-
+.laungauge-picker {
+    background-color: transparent;
+    border: 0px;
+    color: black;
+    text-shadow:
+    -1px -1px  0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
 /* QR code generator */
 #qrCode {
     margin: 15px;
